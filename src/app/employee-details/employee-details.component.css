@@ -1,0 +1,16 @@
+.subHeader {
+  display: flex;
+  margin-top: 5px;
+}
+h2 {
+  margin-bottom: 0px;
+  padding-left: 20px;
+  padding-top: 0px;
+  line-height: 3em;
+}
+.mat-raised-button {
+  width: 50%;
+}
+img {
+  width: 90%;
+}

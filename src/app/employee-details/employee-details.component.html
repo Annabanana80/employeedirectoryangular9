@@ -1,0 +1,52 @@
+<div class="subHeader">
+  <button mat-fab (click)="list()" color="accent">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <h2>{{ employee.firstName }} {{ employee.lastName }}</h2>
+</div>
+<div *ngIf="employee">
+  <mat-grid-list cols="2">
+    <mat-grid-tile>
+      <img src="{{ employee.avatar }}" alt="{{ employee.firstName }}" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-list>
+        <mat-list-item> </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item
+          ><label><b>Job Title: </b></label>
+          {{ employee.jobTitle }}</mat-list-item
+        >
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <label><b>Department: </b></label>
+          {{ employee.jobArea }}</mat-list-item
+        >
+        <mat-divider></mat-divider>
+        <mat-list-item
+          ><label><b>Job Type: </b></label>
+          {{ employee.jobType }}</mat-list-item
+        >
+        <mat-divider></mat-divider>
+        <mat-list-item
+          ><label><b>Email: </b></label> {{ employee.emailId }}</mat-list-item
+        >
+        <mat-divider></mat-divider>
+        <mat-list-item
+          ><label><b>Phone Number: </b></label>
+          {{ employee.phoneNumber }}</mat-list-item
+        >
+        <mat-divider></mat-divider>
+      </mat-list>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<button mat-raised-button color="primary" (click)="employeeUpdate(id)">
+  Edit
+</button>
+<button mat-raised-button (click)="deleteEmployee(employee.id)" color="accent">
+  Delete
+</button>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,27 @@
+<div class="row">
+  <mat-card *ngFor="let employee of employees | async">
+    <mat-card-header>
+      <mat-card-title
+        >{{ employee.firstName }} {{ employee.lastName }}</mat-card-title
+      >
+      <mat-card-subtitle>{{ employee.jobTitle }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img
+        mat-card-image
+        src="{{ employee.avatar }}"
+        alt="{{ employee.firstName }}"
+      />
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        (click)="employeeDetails(employee.id)"
+        mat-raised-button
+        color="primary"
+      >
+        Details
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<router-outlet></router-outlet>

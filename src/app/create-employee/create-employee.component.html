@@ -1,0 +1,111 @@
+<h3>Add a new Employee</h3>
+<div>
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="text"
+        id="avatar"
+        required
+        [(ngModel)]="employee.avatar"
+        name="avatar"
+      />
+      <mat-label matInput>Avatar</mat-label>
+      <textarea
+        matInput
+        placeholder="Input a link for an image from an image hosting service"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="text"
+        id="firstName"
+        required
+        [(ngModel)]="employee.firstName"
+        name="firstName"
+      />
+      <mat-label>First Name</mat-label>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="text"
+        id="lastName"
+        required
+        [(ngModel)]="employee.lastName"
+        name="lastName"
+      />
+      <mat-label>Last Name</mat-label>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="text"
+        id="emailId"
+        required
+        [(ngModel)]="employee.emailId"
+        name="emailId"
+      />
+      <mat-label>Email</mat-label>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="text"
+        id="phoneNumber"
+        required
+        [(ngModel)]="employee.phoneNumber"
+        name="phoneNumber"
+      />
+      <mat-label>Phone Number</mat-label>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="text"
+        id="jobTitle"
+        required
+        [(ngModel)]="employee.jobTitle"
+        name="jobTitle"
+      />
+      <mat-label>Job Title</mat-label>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="text"
+        id="jobArea"
+        required
+        [(ngModel)]="employee.jobArea"
+        name="jobArea"
+      />
+      <mat-label>Department</mat-label>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="text"
+        id="jobType"
+        required
+        [(ngModel)]="employee.jobType"
+        name="jobType"
+      />
+      <mat-label>Job Type</mat-label>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">
+      Submit
+    </button>
+  </form>
+</div>
+<!-- <div [hidden]="!submitted">
+  <button mat-raised-button color="accent" (click)="gotoDetail(employee.id)">
+    Go to Employee Detail
+  </button>
+</div> -->

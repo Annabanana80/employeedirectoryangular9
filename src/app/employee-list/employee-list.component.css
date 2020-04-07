@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+.mat-card {
+  margin: 13px;
+  width: 25%;
+}
+.mat-raised-button {
+  width: 100%;
+}
